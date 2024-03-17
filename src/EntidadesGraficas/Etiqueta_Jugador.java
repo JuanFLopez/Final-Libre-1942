@@ -4,7 +4,7 @@ import javax.swing.ImageIcon;
 
 public class Etiqueta_Jugador extends Entidad_grafica {
 	
-	private final int mejorasSinAfectarJugador=1;
+	
 	
 	private String[] rutasImagen = { "/GraficasSpritesJugador/TanqueBase.png",
 			"/GraficasSpritesJugador/TanqueInvulnerable.png", "/GraficasSpritesJugador/TanqueSuper.png",
@@ -23,7 +23,7 @@ public class Etiqueta_Jugador extends Entidad_grafica {
 	
 	public void setPowerUp(boolean[] mejoras) {
 		boolean encontre = false;
-		for (int i = this.mejorasSinAfectarJugador; i < mejoras.length && !encontre; i++)
+		for (int i = 0; i < mejoras.length && !encontre; i++)
 			if (mejoras[i]) {
 				super.reDimensionar(this, new ImageIcon(Etiqueta_Jugador.class.getResource(rutasImagen[i+1])));
 				encontre = true;
