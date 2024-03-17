@@ -71,7 +71,8 @@ public class Juego implements Runnable {
 	}
 	
 	public String puntaje() {
-		return " "+puntaje+" ";
+		String toReturn= Integer.toString(puntaje);
+		return toReturn;
 	}
 	
 	public void aumentarPuntaje(int bono) {
